@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title  style="margin-left:55px">TRIVIA</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content align="center"  padding class="home">
+
+  <h3 style="font-family:cursive">Presiona en comenzar y disfruta</h3>
+
+  <button ion-button block  (click)="Comenzar()" style="font-family:arial">COMENZAR JUEGO</button>
+
+<ion-card style="background:#ebe9f9">
+  <ion-card-header style="border-bottom:solid 2px black">
+    <h2 class="letras">ULTIMAS RESPUESTAS</h2>
+  </ion-card-header>
+
+  <ion-list  align="center" style="background:#ebe9f9">
+  
+ <ion-item *ngFor="let item of items | async" style="background:#ebe9f9">
+   <p>
+     {{item.RespuestaElegida}}
+   </p>
+ </ion-item>
+
+  </ion-list>
+</ion-card>
+</ion-content>
