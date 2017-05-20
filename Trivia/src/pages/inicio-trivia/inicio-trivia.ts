@@ -53,67 +53,61 @@ export class InicioTrivia {
     this.usuario.puntaje=this.usuario.puntaje+10;
      this.usuario.resElegida.push(this.respuesta1);                 
      this.ntaudio.play('correcto', () => console.log('correcto play'));
-     this.vibration.vibrate(1000);
+     this.vibration.vibrate(800);
      this.aPregunta2();
    }
   if(r==2 && this.v==0){
      this.usuario.resElegida.push(this.respuesta2);
      this.ntaudio.play('incorrecto', () => console.log('incorrecto play'));
-this.vibration.vibrate(1000);
-this.vibration.vibrate(1000);
+this.vibration.vibrate([300,100,300]);
      this.aPregunta2();
     }
  if(r==3  && this.v==0){
     this.usuario.resElegida.push(this.respuesta3);
   this.ntaudio.play('incorrecto', () => console.log('incorrecto play'));
-   this.vibration.vibrate(1000);
-  this.vibration.vibrate(1000);
+   this.vibration.vibrate([300,100,300]);
    this.aPregunta2();
   }
    if(r==1 && this.v==1){
     this.usuario.puntaje=this.usuario.puntaje+10;
      this.usuario.resElegida.push(this.respuesta1);
           this.ntaudio.play('correcto', () => console.log('correcto play'));
-this.vibration.vibrate(1000);
+this.vibration.vibrate(800);
 
    this.aPregunta3(); 
   }
    if(r==2 && this.v==1){
       this.usuario.resElegida.push(this.respuesta2);
   this.ntaudio.play('incorrecto', () => console.log('incorrecto play'));
-  this.vibration.vibrate(1000);
-this.vibration.vibrate(1000);
-   this.aPregunta3();
+this.vibration.vibrate([300,100,300]);
+  this.aPregunta3();
   }
    if(r==3 && this.v==1){
       this.usuario.resElegida.push(this.respuesta3);
        this.ntaudio.play('incorrecto', () => console.log('incorrecto play'));
- this.vibration.vibrate(1000);
-this.vibration.vibrate(1000);
+this.vibration.vibrate([300,100,300]);
        console.log("arrayres"+this.usuario.resElegida);
 
    this.aPregunta3();
   }
   if(r==1 && this.v==2){
-   this.usuario.puntaje=this.usuario.puntaje+10;
     this.usuario.resElegida.push(this.respuesta1);
   this.ntaudio.play('incorrecto', () => console.log('incorrecto play'));
- this.vibration.vibrate(1000);
-this.vibration.vibrate(1000);
+ this.vibration.vibrate([300,100,300]);
    this.irAresultados();
   }
    if(r==2 && this.v==2){
       this.usuario.resElegida.push(this.respuesta2);
   this.ntaudio.play('incorrecto', () => console.log('incorrecto play'));
- this.vibration.vibrate(1000);
-
-this.vibration.vibrate(1000);
+ this.vibration.vibrate([300,100,300]);
      this.irAresultados();
   }
    if(r==3 && this.v==2){
+        this.usuario.puntaje=this.usuario.puntaje+10;
+
       this.usuario.resElegida.push(this.respuesta3);
      this.ntaudio.play('correcto', () => console.log('correcto play'));
-this.vibration.vibrate(1000);
+this.vibration.vibrate(800);
 
      this.irAresultados();
 
@@ -121,6 +115,7 @@ this.vibration.vibrate(1000);
   }
    this.v=this.v+1;  
 }
+knljkn
    presentLoadingDefault(){
      let loading = this.loadCtrl.create({
     content: 'CARGANDO RESULTADOS...'
